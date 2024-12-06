@@ -27,15 +27,15 @@ import java.util.Scanner;
 
 public class DynamicArrayTest {
     public static void main(String[] args) {
-        // Create a scanner object to take user input
+        // take user input
         Scanner scanner = new Scanner(System.in);
 
-        // Create a DynamicArray instance for integers
+        // create a DynamicArray instance for integers
         DynamicArray<Integer> dynamicArray = new DynamicArray<>();
 
-        // Menu-driven program
+        // menu-driven program
         while (true) {
-            System.out.println("\nDynamic Array Operations:");
+            System.out.println("\nDynamic Array Operations/Menu:");
             System.out.println("1. Add an element");
             System.out.println("2. Remove an element by index");
             System.out.println("3. Check if an element exists");
@@ -43,17 +43,17 @@ public class DynamicArrayTest {
             System.out.println("5. Exit");
 
             System.out.print("Enter your choice (1-5): ");
-            int choice = scanner.nextInt(); // Read the user's choice
+            int choice = scanner.nextInt(); // read the user's choice
 
             switch (choice) {
-                case 1: // Add an element
+                case 1: // adding an element
                     System.out.print("Enter an element to add: ");
                     int elementToAdd = scanner.nextInt();
                     dynamicArray.add(elementToAdd);
                     System.out.println("Added " + elementToAdd + " to the dynamic array.");
                     break;
 
-                case 2: // Remove an element by index
+                case 2: // removing an element by index
                     System.out.print("Enter the index to remove: ");
                     int indexToRemove = scanner.nextInt();
                     try {
@@ -64,7 +64,7 @@ public class DynamicArrayTest {
                     }
                     break;
 
-                case 3: // Check if an element exists
+                case 3: // checking if an element exists
                     System.out.print("Enter an element to check: ");
                     int elementToCheck = scanner.nextInt();
                     if (dynamicArray.contains(elementToCheck)) {
@@ -74,16 +74,16 @@ public class DynamicArrayTest {
                     }
                     break;
 
-                case 4: // Display the array
+                case 4: // displaying the array
                     System.out.println("DynamicArray contents: " + dynamicArray);
                     break;
 
-                case 5: // Exit the program
+                case 5: // exiting the program
                     System.out.println("Exiting program. Goodbye!");
                     scanner.close(); // Close the scanner
                     return;
 
-                default: // Invalid choice
+                default: // in case of invalid choice
                     System.out.println("Invalid choice. Please try again.");
             }
         }
